@@ -5,7 +5,7 @@ var fs = require('fs');
 var requestListener = function (req, res) {
   res.writeHead(200);
 
-  fs.readfile('index.html', 'utf8', function (err, data){
+  fs.readFile('index.html', 'utf8', function (err, data){
         if(err){
         return console.log(err);
         }

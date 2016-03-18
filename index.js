@@ -1,6 +1,6 @@
 var PORT = process.env.PORT || 8080;
 var http = require('http');
-var fs = requisre('fs');
+var fs = require('fs');
 var requestListener = function (req, res) {
   res.writeHead(200);
   fs.readfile('index.html', 'utf8', function (err, data){
@@ -8,7 +8,7 @@ var requestListener = function (req, res) {
         return console.log(err);
         }
         res.end(data);
-  }
+  })
 }
 
 var server = http.createServer(requestListener);
